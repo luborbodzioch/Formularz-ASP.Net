@@ -4,11 +4,13 @@ namespace WebMvc1.Models
 {
     public class FormModel
     {
-        [Display(Name = "Nazwa elementu")]
+        [Display(Name = "Imie")]
         public string Name { get; set; }
-        [Display(Name = "Opis elementu")]
-        public string Description { get; set; }
-        [Display(Name = "Element widoczny?")]
-        public bool IsVisible { get; set; }
+
+        public System.DateTime DateOfBirth { get; set; }
+
+        [Display(Name = "Dni od urodzin")]
+        public double Days { get; set; }
+        
     }
 }

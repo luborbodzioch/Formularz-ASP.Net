@@ -37,6 +37,11 @@ namespace WebMvc1.Controllers
         [HttpPost]
         public IActionResult Form1(FormModel model)
         {
+            DateTime now = DateTime.Now;
+            TimeSpan Days = now - model.DateOfBirth;
+            model.Days = Math.Floor(Days.TotalDays);
+
+
             return View(model);
         }
 
